@@ -48,9 +48,9 @@ go test ./... -v
 
 Located in `.claude/skills/`:
 
-- **tech-debt** — Scans the codebase for technical debt across 6 categories (code, architecture, test, dependency, documentation, infrastructure). Scores each issue using `(Impact + Risk) × (6 − Effort)` and produces a prioritized remediation plan.
-- **testing** — Runs the test suite, analyzes failures with root cause explanations, flags slow/flaky/skipped tests, and suggests specific fixes.
-- **update-claude-md** — Syncs CLAUDE.md with current project state. Hard limit: 200 lines max.
+- **tech-debt** — Scans codebase across 6 debt categories, scores with `(Impact + Risk) × (6 − Effort)`, outputs prioritized remediation plan.
+- **testing** — Runs `go test ./... -v`, analyzes failures with root cause + fix suggestions, flags slow/flaky tests.
+- **update-claude-md** — Syncs this file with current project state. Hard limit: 200 lines.
 
 ## Subagent Model Routing
 
